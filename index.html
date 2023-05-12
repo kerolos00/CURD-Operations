@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/super.css">
+    <link rel="stylesheet" href="css/media.css">
+    <script src="Js/bootstrap.bundle.min.js"></script>
+    <title>CURD Operations</title>
+</head>
+
+<body>
+
+    <div class="container mt-5">
+
+        <form action="">
+            <div class="mb-3">
+                <label for="ProductName">Product Name </label>
+                <input type="text" class="form-control" name="ProductName" id="ProductName">
+            </div>
+            <div class="mb-3">
+                <label for="ProductPrice">Product Price </label>
+                <input type="number" class="form-control" name="ProductPrice" id="ProductPrice">
+            </div>
+            <div class="mb-3">
+                <label for="ProductCategory">Product Category </label>
+                <select class="form-select" name="formSelect" id="ProductCategory">
+                    <option value="tv">tv</option>
+                    <option value="mobil">mobile</option>
+                    <option value="laptop">laptop</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="ProductDescription">Product Description </label>
+                <textarea class="form-control mt-2" name="ProductDescription" id="ProductDescription"></textarea>
+            </div>
+        </form>
+        <button type="button " id="addProduct" onclick="addProduct()" class="btn btn-outline-info fw-bolder">Add
+            Product</button>
+        <button style="display: none;" type="button " id="addEdit" onclick="addEdit()"
+            class="btn btn-outline-info fw-bolder">Add
+            Edit</button>
+        <button type="button " onclick="clearForm()" class="btn btn-outline-danger fw-bolder">Clear Form</button>
+    </div>
+
+    <div class="container">
+        <input onkeyup="search()" type="text" placeholder="Search........" class="form-control w-50 mx-auto my-5"
+            name="search" id="searchInput">
+
+        <table class="table table-striped-columns text-center table-responsive">
+            <thead>
+                <tr>
+                    <th>Index</th>
+                    <th>Product Name</th>
+                    <th>Product Price</th>
+                    <th>Product Category</th>
+                    <th>Product Description</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+
+            </tbody>
+        </table>
+    </div>
+
+
+    <script src="Js/index.js"></script>
+
+</body>
+
+</html>
